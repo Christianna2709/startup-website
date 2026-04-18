@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700;800&display=swap');
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -28,7 +28,8 @@
   --color-accent: hsl(var(--accent));
   --color-accent-foreground: hsl(var(--accent-foreground));
 
-  --font-sans: 'Poppins', sans-serif;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Poppins', sans-serif;
 }
 
 :root {
@@ -62,6 +63,19 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
+    @apply font-sans antialiased text-foreground;
+    background: linear-gradient(135deg, #fafafa 0%, #f0f0ff 100%);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+  h1 {
+    letter-spacing: -0.03em;
+  }
+  h2, h3 {
+    letter-spacing: -0.02em;
+  }
+  a {
+    transition: color 0.2s ease;
   }
 }

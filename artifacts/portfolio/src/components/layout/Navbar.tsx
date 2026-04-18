@@ -7,6 +7,7 @@ import { cn } from "@/lib/utils";
 export function Navbar() {
   const [isScrolled, setIsScrolled] = React.useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+  const [activeSection, setActiveSection] = React.useState("");
 
   React.useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +17,30 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  React.useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+
+    const sections = document.querySelectorAll("section[id]");
+    sections.forEach((section) => observer.observe(section));
+
+    return () => {
+      sections.forEach((section) => observer.unobserve(section));
+    };
+  }, []);
+
   const navLinks = [
-    { href: "#about", label: "About" },
-    { href: "#work", label: "Work" },
-    { href: "#contact", label: "Contact" },
+    { href: "#about", label: "About", id: "about" },
+    { href: "#work", label: "Work", id: "work" },
+    { href: "#contact", label: "Contact", id: "contact" },
   ];
 
   return (
@@ -30,21 +51,27 @@ export function Navbar() {
       )}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <Link href="/" className="text-xl font-bold text-foreground">
+        <Link href="/" className="text-xl font-bold text-foreground font-display">
           Studio<span className="text-primary">.dev</span>
         </Link>
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <ul className="flex items-center gap-8 text-sm font-medium text-muted-foreground">
+          <ul className="flex items-center gap-8 text-sm font-medium text-muted-foreground font-sans">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a 
                   href={link.href}
-                  className="hover:text-primary transition-colors relative group"
+                  className={cn(
+                    "hover:text-primary transition-colors relative group",
+                    activeSection === link.id ? "text-primary" : ""
+                  )}
                 >
                   {link.label}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
+                  <span className={cn(
+                    "absolute -bottom-1 left-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full",
+                    activeSection === link.id ? "w-full" : "w-0"
+                  )}></span>
                 </a>
               </li>
             ))}
@@ -67,12 +94,15 @@ export function Navbar() {
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden absolute top-full left-0 right-0 bg-white border-b shadow-lg p-6 flex flex-col gap-6">
-          <ul className="flex flex-col gap-4 text-base font-medium text-foreground">
+          <ul className="flex flex-col gap-4 text-base font-medium font-sans">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a 
                   href={link.href}
-                  className="block py-2 hover:text-primary transition-colors"
+                  className={cn(
+                    "block py-2 hover:text-primary transition-colors",
+                    activeSection === link.id ? "text-primary font-semibold" : "text-foreground"
+                  )}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
