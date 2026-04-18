@@ -2,8 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 
 const SKILLS = [
-  { id: "react", name: "React", x: 20, y: 20, level: 98, color: "#00f0ff" },
-  { id: "spring", name: "Spring Boot", x: 75, y: 30, level: 95, color: "#b026ff" },
+  { id: "react", name: "React", x: 20, y: 20, level: 98, color: "#ff6b1a" },
+  { id: "spring", name: "Spring Boot", x: 75, y: 30, level: 95, color: "#1aadff" },
   { id: "ts", name: "TypeScript", x: 40, y: 55, level: 92, color: "#3178c6" },
   { id: "java", name: "Java", x: 80, y: 70, level: 90, color: "#f89820" },
   { id: "node", name: "Node.js", x: 15, y: 75, level: 88, color: "#3c873a" },
@@ -45,7 +45,7 @@ export default function Skills() {
       </motion.div>
 
       <div className="flex-1 relative rounded-[3rem] glass-panel border border-white/10 overflow-hidden bg-black/40" ref={containerRef}>
-        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(0,240,255,0.05) 0%, transparent 70%)' }} />
+        <div className="absolute inset-0" style={{ background: 'radial-gradient(circle at center, rgba(255,107,26,0.05) 0%, transparent 70%)' }} />
         
         <svg className="absolute inset-0 w-full h-full pointer-events-none">
           {lines.map((line, i) => {

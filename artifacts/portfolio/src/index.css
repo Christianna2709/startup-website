@@ -70,19 +70,19 @@
   --popover-foreground: 0 0% 98%;
   --popover-border: 240 8% 14%;
 
-  /* Electric Cyan */
-  --primary: 170 100% 48%;
-  --primary-foreground: 240 15% 4%;
+  /* Electric Orange */
+  --primary: 22 100% 55%;
+  --primary-foreground: 0 0% 100%;
 
-  /* Vivid Purple */
-  --secondary: 280 75% 62%;
-  --secondary-foreground: 0 0% 98%;
+  /* Sky Blue */
+  --secondary: 205 90% 55%;
+  --secondary-foreground: 0 0% 100%;
 
   --muted: 240 10% 12%;
   --muted-foreground: 240 5% 60%;
 
-  --accent: 280 75% 62%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 205 90% 55%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
@@ -90,21 +90,21 @@
   --sidebar: 240 12% 6%;
   --sidebar-foreground: 0 0% 98%;
   --sidebar-border: 240 8% 12%;
-  --sidebar-primary: 170 100% 48%;
-  --sidebar-primary-foreground: 240 15% 4%;
-  --sidebar-accent: 280 75% 62%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 170 100% 48%;
+  --sidebar-primary: 22 100% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 205 90% 55%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-ring: 22 100% 55%;
 
-  --chart-1: 170 100% 48%;
-  --chart-2: 280 75% 62%;
-  --chart-3: 210 100% 50%;
-  --chart-4: 120 100% 50%;
-  --chart-5: 320 100% 60%;
+  --chart-1: 22 100% 55%;
+  --chart-2: 205 90% 55%;
+  --chart-3: 45 100% 55%;
+  --chart-4: 160 80% 50%;
+  --chart-5: 340 90% 60%;
 
   --border: 240 8% 14%;
   --input: 240 8% 18%;
-  --ring: 170 100% 48%;
+  --ring: 22 100% 55%;
 
   --button-outline: rgba(255,255,255, .10);
   --badge-outline: rgba(255,255,255, .05);
@@ -131,17 +131,19 @@
   --popover-foreground: 0 0% 98%;
   --popover-border: 240 8% 14%;
 
-  --primary: 170 100% 48%;
-  --primary-foreground: 240 15% 4%;
+  /* Electric Orange */
+  --primary: 22 100% 55%;
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 280 75% 62%;
-  --secondary-foreground: 0 0% 98%;
+  /* Sky Blue */
+  --secondary: 205 90% 55%;
+  --secondary-foreground: 0 0% 100%;
 
   --muted: 240 10% 12%;
   --muted-foreground: 240 5% 60%;
 
-  --accent: 280 75% 62%;
-  --accent-foreground: 0 0% 98%;
+  --accent: 205 90% 55%;
+  --accent-foreground: 0 0% 100%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 98%;
@@ -149,21 +151,21 @@
   --sidebar: 240 12% 6%;
   --sidebar-foreground: 0 0% 98%;
   --sidebar-border: 240 8% 12%;
-  --sidebar-primary: 170 100% 48%;
-  --sidebar-primary-foreground: 240 15% 4%;
-  --sidebar-accent: 280 75% 62%;
-  --sidebar-accent-foreground: 0 0% 98%;
-  --sidebar-ring: 170 100% 48%;
+  --sidebar-primary: 22 100% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 205 90% 55%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-ring: 22 100% 55%;
 
-  --chart-1: 170 100% 48%;
-  --chart-2: 280 75% 62%;
-  --chart-3: 210 100% 50%;
-  --chart-4: 120 100% 50%;
-  --chart-5: 320 100% 60%;
+  --chart-1: 22 100% 55%;
+  --chart-2: 205 90% 55%;
+  --chart-3: 45 100% 55%;
+  --chart-4: 160 80% 50%;
+  --chart-5: 340 90% 60%;
 
   --border: 240 8% 14%;
   --input: 240 8% 18%;
-  --ring: 170 100% 48%;
+  --ring: 22 100% 55%;
 }
 
 @layer base {
@@ -181,10 +183,10 @@
 
 /* Neon text utility */
 .text-neon {
-  text-shadow: 0 0 10px rgba(0, 240, 255, 0.5), 0 0 20px rgba(0, 240, 255, 0.3);
+  text-shadow: 0 0 10px rgba(255, 107, 26, 0.6), 0 0 25px rgba(255, 107, 26, 0.35);
 }
 .text-neon-purple {
-  text-shadow: 0 0 10px rgba(176, 38, 255, 0.5), 0 0 20px rgba(176, 38, 255, 0.3);
+  text-shadow: 0 0 10px rgba(26, 173, 255, 0.6), 0 0 25px rgba(26, 173, 255, 0.35);
 }
 
 /* Glass panel */
