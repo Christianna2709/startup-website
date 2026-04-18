@@ -2,7 +2,7 @@
 
 ## Overview
 
-pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
+Full-stack web development startup portfolio website. A recruiter-targeted portfolio with bold dark UI, neon accents, animated pages, and an interactive "Neural Architecture" skills constellation. Contact form connects to Express backend.
 
 ## Stack
 
@@ -10,11 +10,25 @@ pnpm workspace monorepo using TypeScript. Each package manages its own dependenc
 - **Node.js version**: 24
 - **Package manager**: pnpm
 - **TypeScript version**: 5.9
-- **API framework**: Express 5
-- **Database**: PostgreSQL + Drizzle ORM
+- **Frontend**: React + Vite (artifacts/portfolio) — dark neon theme, framer-motion animations
+- **API framework**: Express 5 (artifacts/api-server)
+- **Database**: PostgreSQL + Drizzle ORM (no tables used yet)
 - **Validation**: Zod (`zod/v4`), `drizzle-zod`
 - **API codegen**: Orval (from OpenAPI spec)
 - **Build**: esbuild (CJS bundle)
+
+## Portfolio Pages
+
+- `/` — Home: Hero with animated text, "What We Do", skills/projects teaser
+- `/about` — About: Developer story with scroll animations
+- `/projects` — Projects: Animated project cards with tech stack badges
+- `/contact` — Contact: Working form using useSubmitContact mutation hook
+- `/skills` — WOW Section: Interactive "Neural Architecture" constellation (glowing skill nodes + animated connection lines)
+
+## API Endpoints
+
+- `GET /api/healthz` — health check
+- `POST /api/contact` — contact form submission (returns success message)
 
 ## Key Commands
 
