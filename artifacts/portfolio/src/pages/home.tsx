@@ -8,9 +8,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-secondary/20 rounded-full blur-[120px] mix-blend-screen" />
-          <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none" />
+          <img src="/images/hero-bg.png" alt="Hero Background" className="absolute inset-0 w-full h-full object-cover opacity-30 z-0" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
+          <div className="absolute bottom-1/4 right-1/4 w-[30rem] h-[30rem] bg-secondary/20 rounded-full blur-[120px] mix-blend-screen pointer-events-none" />
         </div>
 
         <div className="container mx-auto px-6 relative z-10">
@@ -167,8 +167,8 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {[
-              { title: "Aura CRM", desc: "Next-generation CRM for boutique agencies.", bg: "from-blue-500/20 to-cyan-400/20" },
-              { title: "Nexus Analytics", desc: "Financial dashboard with sub-50ms query responses.", bg: "from-purple-500/20 to-pink-500/20" }
+              { title: "Aura CRM", desc: "Next-generation CRM for boutique agencies.", bg: "from-blue-500/20 to-cyan-400/20", image: "project-aura.png" },
+              { title: "Nexus Analytics", desc: "Financial dashboard with sub-50ms query responses.", bg: "from-purple-500/20 to-pink-500/20", image: "project-nexus.png" }
             ].map((project, i) => (
               <motion.div
                 key={i}
@@ -176,10 +176,11 @@ export default function Home() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: i * 0.1 }}
-                className="group relative h-80 rounded-[2rem] overflow-hidden border border-white/10 hover:border-white/30 transition-colors"
+                className="group relative h-80 rounded-[2rem] overflow-hidden border border-white/10 hover:border-white/30 transition-colors glass-panel"
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.bg} group-hover:opacity-80 transition-opacity opacity-40`} />
-                <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black/80 to-transparent">
+                <div className="absolute inset-0 bg-cover bg-center opacity-40 group-hover:opacity-60 transition-opacity" style={{ backgroundImage: `url(/images/${project.image})` }} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.bg} group-hover:opacity-80 transition-opacity opacity-60 mix-blend-overlay`} />
+                <div className="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/90 to-transparent">
                   <h3 className="text-3xl font-display font-bold mb-2 text-white">{project.title}</h3>
                   <p className="text-zinc-300">{project.desc}</p>
                 </div>

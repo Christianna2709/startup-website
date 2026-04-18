@@ -1,0 +1,44 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "FpQRwyRGMpCMQ5I54wemz"
+uri = "file://artifacts/portfolio/public/images/hero-bg.png"
+type = "image"
+title = "Dark tech mesh background"
+
+[[generated]]
+id = "qsl7JIz5Y-krpT1dnX_tw"
+uri = "file://artifacts/portfolio/public/images/about-profile.png"
+type = "image"
+title = "Developer headshot dark studio"
+
+[[generated]]
+id = "ueBn_0Q0Ioi7Y2wLkJVac"
+uri = "file://artifacts/portfolio/public/images/project-aura.png"
+type = "image"
+title = "Sleek CRM dashboard UI"
+
+[[generated]]
+id = "1307Hw0OORoFce1mp9lk0"
+uri = "file://artifacts/portfolio/public/images/project-nexus.png"
+type = "image"
+title = "Financial analytics glowing charts"
+
+[[generated]]
+id = "TW1y9bIvk2KE-ya_8cm97"
+uri = "file://artifacts/portfolio/public/images/project-lumina.png"
+type = "image"
+title = "Ecommerce product photography neon"
+
+[[generated]]
+id = "qWRTy5bBFZv-HffDUwb5k"
+uri = "file://artifacts/portfolio/public/images/project-sync.png"
+type = "image"
+title = "Video collaboration platform UI"
+
+[[generated]]
+id = "ea7bnw-C69asb-9LNiDNG"
+uri = "file://artifacts/portfolio/public/images/project-vanguard.png"
+type = "image"
+title = "Developer API docs interface"

@@ -18,6 +18,12 @@ export default function About() {
             We are a collective of obsessive builders. We believe that software should feel crafted, not merely assembled.
           </p>
 
+          <div className="mb-16 rounded-3xl overflow-hidden relative border border-primary/30 shadow-[0_0_40px_rgba(0,245,212,0.15)] group">
+            <img src="/images/about-profile.png" alt="Developer Profile" className="w-full h-[400px] md:h-[500px] object-cover group-hover:scale-105 transition-transform duration-700" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent opacity-80" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 mix-blend-overlay" />
+          </div>
+
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
               <h3 className="text-2xl font-display font-semibold text-white mb-4">Our Philosophy</h3>
